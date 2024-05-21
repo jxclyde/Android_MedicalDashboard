@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Section with burger-menu and profile icon -->
+    <ImageView
+        android:id="@+id/burgerMenu"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_burger_menu"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_account_circle"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"/>
+
+    <!-- Page search bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="Find my doctor..."
+        android:layout_below="@id/burgerMenu"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Horizontal list with 4 service recommendations -->
+    <HorizontalScrollView
+        android:id="@+id/scrollViewServices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchBar"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Here we have 4 separate imageViews for services-->
+            <ImageView
+                android:id="@+id/serviceRecommendation1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_services"
+                android:layout_margin="16dp"/>
+
+            <ImageView
+                android:id="@+id/serviceRecommendation2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_services"
+                android:layout_margin="16dp"/>
+
+            <ImageView
+                android:id="@+id/serviceRecommendation3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_services"
+                android:layout_margin="16dp"/>
+
+            <ImageView
+                android:id="@+id/serviceRecommendation4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_services"
+                android:layout_margin="16dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <include layout="@layout/doctor_card_layout"
+        android:id="@+id/doctorCard"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:layout_below="@id/scrollViewServices"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFD9D9D9"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:foregroundGravity="center" />
+
+
+
+
+    <!-- Section with "Top Doctors" title and "See all" button -->
+    <TextView
+        android:id="@+id/topDoctorsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Doctors"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/doctorCard"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/seeAllText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See all"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/doctorCard"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Here I will apply RecyclerView for all possible doctors list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/doctorsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topDoctorsText"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>

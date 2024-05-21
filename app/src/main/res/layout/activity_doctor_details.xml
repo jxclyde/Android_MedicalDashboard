@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Photo of the doctor -->
+    <ImageView
+        android:id="@+id/doctorImageView"
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+        android:src="@drawable/ic_doctor_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Doctor's name and specialization -->
+    <TextView
+        android:id="@+id/doctorNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor's Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/doctorImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/specializationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Specialization"
+        android:textSize="16sp"
+        android:layout_below="@id/doctorNameTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/reviewsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor reviews :"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/specializationTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"/>
+
+    <!-- RecyclerView for displaying reviews -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reviewsTextView"
+        android:layout_marginTop="17dp" />
+
+    <Button
+        android:id="@+id/bookAppointmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reviewsRecyclerView"
+        android:layout_marginTop="-3dp"
+        android:text="Book an Appointment"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
