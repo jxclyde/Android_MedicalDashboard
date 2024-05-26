@@ -1,9 +1,9 @@
-package com.example.medicaldashboard_doctor
+package com.example.medicaldashboard_doctor.db
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-import com.example.medicaldashboard_doctor.api.ReviewAPI
+import com.example.medicaldashboard_doctor.pre_api.ReviewAPI
 
 
 @Entity(tableName = "review")

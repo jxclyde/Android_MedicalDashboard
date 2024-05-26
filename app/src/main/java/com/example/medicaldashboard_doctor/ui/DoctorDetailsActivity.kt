@@ -1,4 +1,4 @@
-package com.example.medicaldashboard_doctor
+package com.example.medicaldashboard_doctor.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -6,6 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import com.example.medicaldashboard_doctor.db.MedicalDashboardDatabase
+import com.example.medicaldashboard_doctor.R
+import com.example.medicaldashboard_doctor.db.Review
+import com.example.medicaldashboard_doctor.adapters.ReviewsAdapter
 
 class DoctorDetailsActivity : AppCompatActivity() {
     private lateinit var reviewsAdapter: ReviewsAdapter

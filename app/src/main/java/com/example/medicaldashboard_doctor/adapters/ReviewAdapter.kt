@@ -1,4 +1,4 @@
-package com.example.medicaldashboard_doctor
+package com.example.medicaldashboard_doctor.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.medicaldashboard_doctor.R
+import com.example.medicaldashboard_doctor.db.Review
 
 class ReviewsAdapter(private val reviewsList: MutableList<Review>) : RecyclerView.Adapter<ReviewsAdapter.ReviewViewHolder>() {
 

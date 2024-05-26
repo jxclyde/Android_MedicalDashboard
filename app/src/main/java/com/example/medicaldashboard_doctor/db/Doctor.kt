@@ -1,4 +1,4 @@
-package com.example.medicaldashboard_doctor
+package com.example.medicaldashboard_doctor.db
 
 data class Doctor (
     val photo: Int,

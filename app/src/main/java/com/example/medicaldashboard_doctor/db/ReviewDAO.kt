@@ -1,4 +1,4 @@
-package com.example.medicaldashboard_doctor
+package com.example.medicaldashboard_doctor.db
 
 import androidx.room.Dao
 import androidx.room.Delete

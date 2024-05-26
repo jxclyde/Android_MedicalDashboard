@@ -1,4 +1,4 @@
-package com.example.medicaldashboard_doctor.api
+package com.example.medicaldashboard_doctor.pre_api
 
 import com.google.gson.annotations.SerializedName
 

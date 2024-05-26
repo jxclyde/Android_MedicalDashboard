@@ -1,6 +1,6 @@
-package com.example.medicaldashboard_doctor
+package com.example.medicaldashboard_doctor.db
 
-import com.example.medicaldashboard_doctor.api.DoctorAPI
+import com.example.medicaldashboard_doctor.pre_api.DoctorAPI
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

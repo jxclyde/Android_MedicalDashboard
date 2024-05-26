@@ -1,12 +1,12 @@
-package com.example.medicaldashboard_doctor
+package com.example.medicaldashboard_doctor.db
 
-import android.icu.text.MessagePattern.ApostropheMode
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import com.example.medicaldashboard_doctor.db.Appointment
 
 @Dao
 interface AppointmentDao {

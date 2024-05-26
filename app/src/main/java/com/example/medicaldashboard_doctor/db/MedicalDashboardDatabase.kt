@@ -1,4 +1,4 @@
-package com.example.medicaldashboard_doctor
+package com.example.medicaldashboard_doctor.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
